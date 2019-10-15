@@ -24,16 +24,13 @@ int main(void) {
 			printf("The secret number is BETWEEN 0 AND %i Guess: \n", r2);
 			while (randNum != inputNum) {
 				scanf("%d", &inputNum);
-				if (randNum > inputNum) {
+				if (randNum > inputNum) 
 					printf("Too LOW! Guess:\n");
-					count++;
-				} else if (randNum < inputNum) {
+				else if (randNum < inputNum) 
 					printf("Too High! Guess:\n");
-					count++;
-				}
+				i++;
 			}
-			printf("Correct: You TOOK %i guesses\n", count);
-			printf("MENU: 's' to start a game, 'n' to set a new range, or 'q' to quit:\n");
+			printf("Correct: You TOOK %i guesses\nMENU: 's' to start a game, 'n' to set a new range, or 'q' to quit:\n", count);
 			totalCount+=count;
 
 			break;
@@ -49,12 +46,11 @@ int main(void) {
 			else{
 			avg = (float)totalCount / countGame;
 			printf("Thanks for playing. Your guess count AVERAGE is %.1f\n", avg);
-			exit(0);
+			return 0;
 			}
 			break;
 		default:
-			printf("UNRECOGNIZED command.\n");
-			printf("MENU: 's' to start a game, 'n' to set a new range, or 'q' to quit:\n");
+			printf("UNRECOGNIZED command.\nMENU: 's' to start a game, 'n' to set a new range, or 'q' to quit:\n");
 			break;
 		}
 
